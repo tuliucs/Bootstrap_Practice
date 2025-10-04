@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t" width="1500px">
+        <title id="t">Icono de manzana mordida</title>
+        <defs>
+          <!-- Máscara para “morder” la manzana (lo negro recorta) -->
+          <mask id="bite">
+            <rect x="0" y="0" width="200" height="240" fill="white"/>
+            <!-- Ajusta cx, cy, r para mover/tamaño de la mordida -->
+            <circle cx="150" cy="115" r="22" fill="black"/>
+            <circle cx="162" cy="98"  r="10" fill="black"/>
+            <circle cx="160" cy="132" r="12" fill="black"/>
+          </mask>
+          <style>
+            .apple { fill: currentColor; }
+          </style>
+        </defs>
+      
+        <!-- Tallo -->
+        <path class="apple" d="M105 48 C107 34 118 27 130 26 C125 37 122 49 120 60 Z" />
+      
+        <!-- Hoja -->
+        <path class="apple" d="M95 42 C78 35 64 20 56 8 C72 9 88 15 101 28 C106 33 103 40 95 42 Z" />
+      
+        <!-- Cuerpo de la manzana (silueta original, no Apple) -->
+        <path class="apple" mask="url(#bite)"
+              d="M100 45
+                 C 82 28, 48 38, 42 72
+                 C 21 78, 16 110, 31 130
+                 C 22 160, 36 195, 80 205
+                 C 95 208, 105 208, 120 205
+                 C 164 195, 179 160, 169 130
+                 C 185 110, 179 78, 159 72
+                 C 154 48, 118 28, 100 45 Z" />
+      </svg>
+
+
+
+
+      <!-- Defínelo una vez (por ejemplo, al inicio del documento) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="icon-house" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 11l9-8 9 8" />
+        <path d="M5 10v10h14V10" />
+        <path d="M10 20v-5h4v5" />
+      </g>
+    </symbol>
+  </svg>
+  
+  <!-- Uso en cualquier parte -->
+  <button style="color:#16a34a">
+    <svg width="24" height="24" aria-hidden="true"><use href="#icon-house"/></svg>
+    Inicio
+  </button>
+</body>
+</html>
