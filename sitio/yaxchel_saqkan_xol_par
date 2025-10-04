@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <title>Yaxchel</title>
+</head>
+<body data-bs-theme="dark">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center" style="color: black;">
+    <div class="container d-flex justify-content-center">
+        <a class="navbar-brand mx-auto" href="#" style="color: black;">Menú</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">    
+                    <a class="nav-link" href="#" style="color: black;"> Página Principal <span class="sr-only">(actual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: black;">Más</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container vh-100 d-flex flex-column justify-content-center align-items-center">
+  <div class="card mb-3" style="width: 18rem;">
+    <div class="card-body text-center"> 
+    <h5 class="card-title"></h5>
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Zm3.69 11.69a.62.62 0 0 1-.85.19c-2.34-1.43-5.29-1.75-8.77-.95a.62.62 0 1 1-.27-1.22c3.8-.84 7.04-.48 9.65 1.08a.62.62 0 0 1 .19.9Zm1.21-2.13a.78.78 0 0 1-1.07.24c-2.68-1.64-6.77-2.12-9.94-1.15a.78.78 0 1 1-.44-1.5c3.55-1.04 8.04-.52 11.13 1.32a.78.78 0 0 1 .32 1.09Zm.11-2.19C10.88 5.7 5.12 5.5 2.6 6.27a.94.94 0 1 1-.54-1.81c2.86-.85 9.02-.62 12.18 1.4a.94.94 0 1 1-.98 1.62Z"/>
+      </svg>
+      SPOTIFY
+    </h5>
+    <br>
+      <p class="card-text">Miles de canciones en un solo lugar.</p>
+      <a href="#" class="btn btn-primary bg-light text-dark">Abrir</a>
+    </div>
+  </div>
+<br>
+
+  <div class="d-flex justify-content-center">
+    <span class="badge bg-secondary mb-3">¡Bienvenido!</span>
+</div>
+
+<p class="text-center mb-3">Explora las mejores plataformas de entretenimiento.</p>
+<button type="button" class="btn btn-primary mb-2 bg-light text-dark">Servicios de Streaming</button>
+</div>
+
+</body>
+</html>
