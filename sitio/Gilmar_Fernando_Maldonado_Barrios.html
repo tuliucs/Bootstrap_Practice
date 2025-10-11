@@ -1,40 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <title>Gilmar Maldonado.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <title>Gilmar Maldonado.</title>
+  <style>
+    body {
+      background-color: #b3e5fc; /* Fondo celeste */....
+    }
+  </style>
 </head>
-<body data-bs-theme="dark">
-    <div class="container text-center py-5">
-        <h2 class="mb-4">Bienvenido inge tulio</h2>
-        <div class="row align-items-start g-3">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Hola Nahum</h5>
-                <p class="card-text">Este es el primer elemento que se ve pro</p>
-              </div>
-            </div>
+<body data-bs-theme="Green">
+  <div class="container text-center py-5">
+    <h2 class="mb-4">Bienvenido inge Tulio</h2>
+
+    <!-- Formulario básico -->
+    <div class="card mx-auto mb-5" style="max-width: 500px;">
+      <div class="card-body text-start">
+        <h4 class="card-title text-center mb-4">Formulario de Registro</h4>
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
           </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Hola Cris</h5>
-                <p class="card-text">Aquí va otro contenido que ahorita no usaeremos</p>
-              </div>
-            </div>
+          <div class="mb-3">
+            <label for="edad" class="form-label">Edad:</label>
+            <input type="number" class="form-control" id="edad" placeholder="Ingresa tu edad" required>
           </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Hola Inge</h5>
-                <p class="card-text">Y un elemento más</p>
-              </div>
-            </div>
+          <div class="mb-3">
+            <label for="genero" class="form-label">Género:</label>
+            <select class="form-select" id="genero" required>
+              <option value="">Selecciona tu género</option>
+              <option value="masculino">Masculino</option>
+              <option value="femenino">Femenino</option>
+              <option value="RARO🫣">RARO🫣</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="fecha" class="form-label">Fecha:</label>
+            <input type="date" class="form-control" id="fecha" required>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary me-2">Enviar</button>
+            <button type="reset" class="btn btn-secondary">Limpiar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Tarjetas existentes -->
+    <div class="row align-items-start g-3">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Hola Nahum</h5>
+            <p class="card-text">Este es el primer elemento que se ve pro</p>
           </div>
         </div>
       </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Hola Cris</h5>
+            <p class="card-text">Aquí va otro contenido que ahorita no usaremos</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Hola Inge</h5>
+            <p class="card-text">Y un elemento más</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
