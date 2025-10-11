@@ -51,5 +51,42 @@
 <button type="button" class="btn btn-primary mb-2 bg-light text-dark">Servicios de Streaming</button>
 </div>
 
+<div class="card mb-3" style="width: 22rem; margin-left: auto; margin-right: auto; background-color: slategray ;">
+  <div class="card-body">
+    <h5 class="card-title text-center">FORMULARIO</h5>
+    <form>
+      <div class="mb-3">
+        <label for="fname" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="fname" name="fname">
+      </div>
+      <div class="mb-3">
+        <label for="lname" class="form-label">Edad:</label>
+        <input type="text" class="form-control" id="lname" name="lname">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Género:</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="Hombre" name="Hombre" value="Hombre">
+          <label class="form-check-label" for="Hombre">Hombre</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="Mujer" name="Mujer" value="Mujer">
+          <label class="form-check-label" for="Mujer">Mujer</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="Otro" name="Otro" value="Otro">
+          <label class="form-check-label" for="Otro">Prefiero no decirlo</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="fecha-hora" class="form-label">Seleccione fecha y hora:</label>
+        <input type="datetime-local" class="form-control" id="fecha-hora" name="fecha-hora">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary w-80" style="margin-left: auto; margin-right: auto; display: block; background-color: seashell; color: black;">Enviar</button>
+    </form>
+  </div>
+</div>
+
 </body>
 </html>
