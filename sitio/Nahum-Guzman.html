@@ -1,26 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola</title>
-    <style>
-        body {
-            background-color: #f3f4f6;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 100px;
-        }
-        h1 {
-            color: #2563eb;
-        }
-        p {
-            color: #374151;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nahum Emmanuel Albeño Guzmán</title>
 </head>
 <body>
-    <h1>¡Hola Cristian!</h1>
-    <p>página sencilla</p>
+  <!-- Encabezado -->
+  <header>
+    <h1>Hola — soy Nahum Emmanuel Albeño Guzmán</h1>
+    <p>Estudiante de Ingeniería en Sistemas | Apasionado por la informática y desarrollo web</p>
+    <nav>
+      <a href="../index.html" title="Volver al índice">← Volver al índice</a>
+    </nav>
+    <hr>
+  </header>
+
+  <!-- Sección principal -->
+  <main>
+    <!-- Saludo -->
+    <section aria-labelledby="saludo">
+      <h2 id="saludo">Bienvenido</h2>
+      <p>Gracias por visitar mi página. Aquí tienes una breve presentación y algunos enlaces útiles.</p>
+    </section>
+
+    <!-- Sobre mí -->
+    <section aria-labelledby="sobre-mi">
+      <h2 id="sobre-mi">Sobre mí</h2>
+      <p>
+        Soy estudiante de <strong>Ingeniería en Sistemas</strong> en la Universidad del Valle de Guatemala Altiplano.
+        Me interesa la programación, la administración de sistemas y la creación de soluciones prácticas.
+      </p>
+      <ul>
+        <li>Habilidades: Windows, Java (básico), Android Studio.</li>
+        <li>Experiencia: reparación de equipos, instalación de software y cableado de red.</li>
+      </ul>
+    </section>
+
+    <!-- Proyecto -->
+    <section aria-labelledby="proyectos">
+      <h2 id="proyectos">Proyecto de ejemplo</h2>
+      <p>Pequeño ejemplo: un saludo dinámico usando JavaScript.</p>
+      <p id="mensaje-saludo">¡Hola! Haz clic en el botón para ver la hora actual.</p>
+      <button id="btn-hora" type="button">Mostrar hora</button>
+    </section>
+
+    <!-- Nuevo Formulario -->
+    <section aria-labelledby="formulario">
+      <h2 id="formulario">Formulario de contacto</h2>
+      <p>Completa tus datos y envíalos:</p>
+
+      <form id="form-datos" onsubmit="enviarFormulario(event)">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" min="1" required><br><br>
+
+        <label for="genero">Género:</label><br>
+        <select id="genero" name="genero" required>
+          <option value="">Seleccione...</option>
+          <option value="masculino">Masculino</option>
+          <option value="femenino">Femenino</option>
+          <option value="otro">Otro</option>
+        </select><br><br>
+
+        <label for="fecha">Fecha:</label><br>
+        <input type="date" id="fecha" name="fecha" required><br><br>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <p id="resultado-form"></p>
+    </section>
+
+    <!-- Contacto -->
+    <section aria-labelledby="contacto">
+      <h2 id="contacto">Contacto</h2>
+      <address>
+        Nahum Emmanuel Albeño Guzmán<br>
+        Correo: <a href="mailto:tu-nahumguzman504@gmail.com">nahumguzman504@gmail.com</a><br>
+        GitHub: <a href="https://github.com/nahum504" target="_blank" rel="noopener">github.com/nahum504</a>
+      </address>
+    </section>
+
+    <!-- Enlaces -->
+    <section aria-labelledby="mas">
+      <h2 id="mas">Más enlaces</h2>
+      <ul>
+        <li><a href="https://www.universidad.example" target="_blank" rel="noopener">Mi universidad</a></li>
+        <li><a href="../sitio/otra_pagina.html" target="visor">Página de ejemplo (compañero)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <hr>
+  <footer>
+    <p>Última actualización: <time id="fecha-actual" datetime=""></time></p>
+    <p><small>Versión simple sin estilos (sin CSS).</small></p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Fecha actual en el footer
+    (function() {
+      const now = new Date();
+      const fechaEl = document.getElementById('fecha-actual');
+      fechaEl.textContent = now.toLocaleDateString('es-GT', { year: 'numeric', month: 'long', day: 'numeric' });
+      fechaEl.setAttribute('datetime', now.toISOString().split('T')[0]);
+    })();
+
+    // Botón que muestra la hora
+    document.getElementById('btn-hora').addEventListener('click', function () {
+      const hora = new Date().toLocaleTimeString('es-GT');
+      document.getElementById('mensaje-saludo').textContent = 'Hora actual: ' + hora;
+    });
+
+    // Formulario: muestra datos ingresados
+    function enviarFormulario(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const edad = document.getElementById('edad').value;
+      const genero = document.getElementById('genero').value;
+      const fecha = document.getElementById('fecha').value;
+
+      const resultado = `Datos enviados correctamente:\nNombre: ${nombre}\nEdad: ${edad}\nGénero: ${genero}\nFecha: ${fecha}`;
+      document.getElementById('resultado-form').textContent = resultado;
+      document.getElementById('form-datos').reset();
+    }
+  </script>
 </body>
 </html>
