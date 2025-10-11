@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Jardín Secreto: Cuidado de Plantas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f9fdf9; /* Un fondo muy claro, casi blanco */
+        }
+        .navbar {
+            background-color: #b2dfdb !important; /* Verde menta suave */
+            box-shadow: 0 2px 4px rgba(0,0,0,.08);
+        }
+        .navbar-brand, .nav-link {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #4CAF50 !important; /* Verde más vibrante para el texto */
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: #81C784 !important; /* Un verde aún más claro al pasar el ratón */
+        }
+        .jumbotron {
+            padding: 4rem 2rem;
+            margin-bottom: 2rem;
+            background-color: #e8f5e9; /* Verde pastel muy claro */
+            border-radius: 1rem; /* Bordes más suaves */
+            text-align: center;
+            position: relative; 
+            overflow: hidden; 
+        }
+        .jumbotron h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.8rem;
+            color: #388E3C; /* Un verde oscuro bonito */
+            margin-bottom: 1rem;
+        }
+        .jumbotron p.lead, .jumbotron p {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.2rem;
+            color: #558B2F; /* Verde un poco más oscuro */
+        }
+        .jumbotron .btn-lg {
+            background-color: #81C784; /* Verde claro */
+            border-color: #81C784;
+            transition: all 0.3s ease;
+        }
+        .jumbotron .btn-lg:hover {
+            background-color: #66BB6A; 
+            border-color: #66BB6A;
+            transform: scale(1.05); 
+        }
+
+        .card {
+            border: none; 
+            border-radius: 0.8rem; 
+            box-shadow: 0 4px 8px rgba(0,0,0,.08); 
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 16px rgba(0,0,0,.15);
+        }
+        .card-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #4CAF50;
+        }
+        .card-text {
+            color: #689F38;
+        }
+        .btn-outline-success {
+            color: #4CAF50;
+            border-color: #4CAF50;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-success:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .footer {
+            background-color: #a5d6a7 !important; 
+            color: #388E3C !important;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.1rem;
+        }
+        .modal-header {
+            background-color: #c8e6c9; 
+            color: #388E3C;
+        }
+        .modal-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+        }
+        .btn-primary {
+            background-color: #81C784;
+            border-color: #81C784;
+        }
+        .btn-primary:hover {
+            background-color: #66BB6A;
+            border-color: #66BB6A;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mi Jardín Secreto <i class="fas fa-leaf"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#agua">Riego</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#luz">Luz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tierra">Tierra</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <div class="jumbotron">
+            <h1 class="display-4"><i class="fas fa-seedling me-3"></i>Guía para el Cuidado de tus Plantas<i class="fas fa-heart ms-3"></i></h1>
+            <p class="lead">Descubre los secretos para que tus compañeras verdes florezcan con amor.</p>
+            <hr class="my-4">
+            <p>Un pequeño cariño y atención pueden transformar tu hogar en un oasis de vida.</p>
+            <a class="btn btn-success btn-lg" href="#conceptos" role="button">Empezar a Cuidar <i class="fas fa-arrow-down ms-2"></i></a>
+        </div>
+
+        <div class="row" id="conceptos">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center">
+                    <img src="https://via.placeholder.com/300x200/90EE90/333333?text=Riego+Perfecto" class="card-img-top p-3" alt="Riego">
+                    <div class="card-body">
+                        <h5 class="card-title" id="agua"><i class="fas fa-tint me-2"></i>El Riego Adecuado</h5>
+                        <p class="card-text">Ni mucha, ni poca. Aprende a leer las señales de tus plantas para un riego perfecto.</p>
+                        <a href="#" class="btn btn-outline-success">Saber más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center">
+                    <img src="https://via.placeholder.com/300x200/FFFACD/333333?text=Luz+Ideal" class="card-img-top p-3" alt="Luz">
+                    <div class="card-body">
+                        <h5 class="card-title" id="luz"><i class="fas fa-sun me-2"></i>La Importancia de la Luz</h5>
+                        <p class="card-text">Cada rayo de sol es energía. Ubica tus plantas donde puedan absorber la luz ideal para ellas.</p>
+                        <a href="#" class="btn btn-outline-success">Saber más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center">
+                    <img src="https://via.placeholder.com/300x200/BC8F8F/FFFFFF?text=Tierra+y+Abono" class="card-img-top p-3" alt="Sustrato">
+                    <div class="card-body">
+                        <h5 class="card-title" id="tierra"><i class="fas fa-mound me-2"></i>El Sustrato Ideal</h5>
+                        <p class="card-text">La tierra es su hogar. Un sustrato rico y bien aireado es la clave para raíces felices.</p>
+                        <a href="#" class="btn btn-outline-success">Saber más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5" id="contacto">
+            <div class="col text-center">
+                <h2>¿Necesitas un Consejo Personalizado? <i class="fas fa-question-circle"></i></h2>
+                <p>¡No dudes en preguntar! Estamos aquí para ayudarte a cuidar tus plantas con amor.</p>
+                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#contactoModal">
+                    Contactar a la Jardinera <i class="fas fa-envelope ms-2"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactoModalLabel">¡Conéctate con Nosotros! <i class="fas fa-comments"></i></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Tu Nombre</label>
+                            <input type="text" class="form-control" id="nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Tu Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">¿Qué te preocupa de tu planta?</label>
+                            <textarea class="form-control" id="mensaje" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Enviar Magia Verde</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center py-3 mt-5">
+        <p><i class="fas fa-heart me-2"></i> Hecho con amor para tus plantas by NAT CQ &copy; 2025 Mi Jardín Secreto.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
