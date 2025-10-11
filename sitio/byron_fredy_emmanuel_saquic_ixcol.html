@@ -3,62 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página minimalista</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Sitio Moderno</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
   <style>
     body {
-      background-color: #f8f9fa;
-      font-family: Arial, sans-serif;
+      background-color: #eef2f5;
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    header {
-      text-align: center;
-      padding: 2rem 0;
-      background-color: #ffffff;
-      border-bottom: 1px solid #dee2e6;
+    .navbar {
+      background-color: #005f73;
     }
-    .col {
+    .navbar-brand {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .card {
+      border: none;
+      border-radius: 12px;
       background-color: #ffffff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      border: 1px solid #dee2e6;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
     footer {
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #6c757d;
+      background-color: #005f73;
+      color: #fff;
+    }
+    .form-section {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h3>Mi Página Byron Saquic</h3>
-    <p style="margin: 0;">Diseño simple con Bootstrap</p>
-  </header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Sitio Moderno</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <div class="container mt-5">
-    <div class="row g-3 text-center">
-      <div class="col-md">
-        Hola mundo
+  <div class="container my-5">
+    <div class="text-center mb-4">
+      <h1 class="fw-bold">Explora un nuevo diseño</h1>
+      <p class="text-muted">Una página limpia, elegante y adaptable a cualquier dispositivo</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h5 class="card-title text-primary">Diseño Responsivo</h5>
+          <p class="card-text">Esta plantilla está creada con Bootstrap 5, lo que garantiza una experiencia visual óptima en móviles y computadoras.</p>
+        </div>
       </div>
-      <div class="col-md">
-        Segunda columna
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h5 class="card-title text-success">Estilo Minimalista</h5>
+          <p class="card-text">Colores suaves y espacios equilibrados para un diseño que se siente moderno sin ser recargado.</p>
+        </div>
       </div>
-      <div class="col-md">
-        Tercera columna
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h5 class="card-title text-warning">Fácil Personalización</h5>
+          <p class="card-text">Modifica los colores, textos o secciones fácilmente para adaptarlo a cualquier propósito o marca.</p>
+        </div>
       </div>
-      <div class="col-md">
-        Cuarta columna
-      </div>
+    </div>
+
+    <!-- 📝 Sección del formulario -->
+    <div class="form-section mx-auto" style="max-width: 600px;">
+      <h4 class="mb-3 text-center">Formulario de Registro</h4>
+      <form>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+        </div>
+        <div class="mb-3">
+          <label for="edad" class="form-label">Edad</label>
+          <input type="number" class="form-control" id="edad" placeholder="Ingresa tu edad">
+        </div>
+        <div class="mb-3">
+          <label for="genero" class="form-label">Género</label>
+          <select class="form-select" id="genero">
+            <option selected disabled>Selecciona tu género</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="fecha" class="form-label">Fecha</label>
+          <input type="text" class="form-control" id="fecha" placeholder="Ejemplo: 11 de octubre de 2025">
+        </div>
+        <div class="text-center">
+          <button type="button" class="btn btn-primary px-4">Enviar</button>
+        </div>
+      </form>
     </div>
   </div>
 
-  <footer>
-    © 2025 - Ejemplo minimalista
+  <footer class="text-center py-4 mt-5">
+    <small>&copy; <span id="year"></span> Sitio Moderno | Todos los derechos reservados</small>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
