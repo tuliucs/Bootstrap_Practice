@@ -1,40 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <title>Cristian Sahon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristian Sahon</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <style>
+    .hero {
+      background: linear-gradient(135deg, #04ad26, #73e8ce);
+      color: white;
+      padding: 100px 0;
+    }
+    .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    .card-body {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border-radius: 0 0 0.25rem 0.25rem;
+    }
+    footer {
+      background-color: #111;
+      color: #ccc;
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .form-section {
+      background-color: #1a1a1a;
+      padding: 50px 0;
+    }
+  </style>
 </head>
 <body data-bs-theme="dark">
-    <div class="container text-center py-5">
-        <h2 class="mb-4">Bienvenido inge tulio</h2>
-        <div class="row align-items-start g-3">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Hola Nahum</h5>
-                <p class="card-text">Este es el primer elemento que se ve pro</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Segunda Columna</h5>
-                <p class="card-text">Aquí va otro contenido que ahorita no usaeremos</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Tercera Columna</h5>
-                <p class="card-text">Y un elemento más por si acaso</p>
-              </div>
-            </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="https://www.uvg.edu.gt/wp-content/uploads/Logo_AF_CAMPUSCENTRAL-07.png" alt="UVG Logo">
+        Cristian Sahon
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formulario">Formulario</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero text-center" id="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">¡Bienvenido, Inge Tulio!</h1>
+      <p class="lead">Este es un ejemplo moderno hecho con Bootstrap</p>
+      <a href="#proyectos" class="btn btn-light btn-lg mt-3">Ver Proyectos</a>
+    </div>
+  </section>
+
+  <!-- CARDS -->
+  <div class="container text-center py-5" id="proyectos">
+    <h2 class="mb-4">Sección de Tarjetas</h2>
+    <div class="row align-items-start g-4">
+      
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/400/200?random=1" class="card-img-top" alt="Imagen 1">
+          <div class="card-body">
+            <h5 class="card-title">Hola Nahum</h5>
+            <p class="card-text">Este espacio es por si le sale aulguna chamba inge le dejo mi perfil de Linkedin.</p>
+            <a href="https://www.linkedin.com/in/cristian-david-sah%C3%B3n-ton%C3%B3n-590a492a0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSxD9xvDoThGFNLF5Hv%2FdKA%3D%3D" target="_blank" class="btn btn-success btn-lg">Linkedin</a>
           </div>
         </div>
       </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/400/200?random=2" class="card-img-top" alt="Imagen 2">
+          <div class="card-body">
+            <h5 class="card-title">Segunda Columna</h5>
+            <p class="card-text">Aquí va algo de Spam de mis redes sociales</p>
+            <a href="https://www.instagram.com/idk_imcriss?igsh=N2dsaGM1N3VnZDZj&utm_source=qr" target="_blank" class="btn btn-success btn-lg">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/400/200?random=3" class="card-img-top" alt="Imagen 3">
+          <div class="card-body">
+            <h5 class="card-title">Tercera Columna</h5>
+            <p class="card-text">Ahí me sigue y así hacemos crecer mi pequeña comunidad.</p>
+            <a href="https://www.facebook.com/share/17j9d1DjgM/?mibextid=wwXIfr" target="_blank" class="btn btn-success btn-lg">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <!-- Formulario -->
+  <section class="form-section" id="formulario">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <h2 class="text-center mb-4">Formulario de Registro</h2>
+          <form id="registroForm">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="edad" class="form-label">Edad</label>
+              <input type="number" class="form-control" id="edad" min="1" max="100" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="genero" class="form-label">Género</label>
+              <select class="form-select" id="genero" required>
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">otro</option>
+                <option value="prefiero-no-decir">Prefiero no decir</option>
+                <option value="nahum">Nahum</option>
+              </select>
+            </div>
+            
+            <div class="mb-3">
+              <label for="fecha" class="form-label">Fecha</label>
+              <input type="date" class="form-control" id="fecha" required>
+            </div>
+            
+            <div class="text-center">
+              <button type="submit" class="btn btn-success btn-lg">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <div class="container text-center py-5" id="contacto">
+    <h2 class="mb-4">Contacto</h2>
+    <p>¿Deseas comunicarte conmigo? Haz clic en el botón para enviarme un mensaje por WhatsApp.</p>
+    <a href="https://wa.me/50259256913" target="_blank" class="btn btn-success btn-lg">WhatsApp</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 | Diseñado con mucho esfuerzo por <strong>Cristian Sahon</strong></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('registroForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nombre = document.getElementById('nombre').value;
+      const edad = document.getElementById('edad').value;
+      const genero = document.getElementById('genero').value;
+      const fecha = document.getElementById('fecha').value;
+      
+      alert(`Formulario enviado!\n\nNombre: ${nombre}\nEdad: ${edad}\nGénero: ${genero}\nFecha: ${fecha}`);
+      
+      // Limpiar formulario
+      this.reset();
+    });
+  </script>
 </body>
 </html>

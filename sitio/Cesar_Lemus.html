@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>César Lemus</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <style>
+    :root{
+      --bg: #fafafa;
+      --muted:#6c757d;
+      --accent:#0d6efd;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#111;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
+    }
+
+  
+    .site-navbar{
+      background:transparent;
+      padding:14px 18px;
+    }
+    .brand{
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+
+
+    .nav-right{
+      gap: 14px;
+      align-items:center;
+    }
+    .nav-right .nav-link{
+      color:var(--muted);
+      padding:6px 8px;
+      border-radius:6px;
+      font-size:0.95rem;
+    }
+    .nav-right .nav-link:hover{
+      background:rgba(13,110,253,0.06);
+      color:var(--accent);
+    }
+
+
+    .hero{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:48px 18px;
+      max-width:1100px;
+      margin: 0 auto;
+      width:100%;
+    }
+    .hero-left{
+      flex:1;
+      min-width:220px;
+    }
+    .name{
+      font-size:2.1rem;
+      font-weight:700;
+      margin:0 0 6px 0;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+    }
+
+
+    .cards{
+      display:flex;
+      gap:12px;
+      margin-top:18px;
+      flex-wrap:wrap;
+    }
+    .mini-card{
+      background:white;
+      border-radius:10px;
+      padding:12px 14px;
+      box-shadow:0 1px 6px rgba(16,24,40,0.04);
+      min-width:180px;
+      flex: 0 1 220px;
+    }
+
+    footer{
+      margin-top:auto;
+      padding:18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:0.9rem;
+      border-top:1px solid rgba(0,0,0,0.04);
+    }
+
+    @media (max-width:720px){
+      .hero{flex-direction:column; align-items:flex-start}
+      .nav-right{margin-top:10px}
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <nav class="site-navbar container d-flex align-items-center">
+    <div class="brand">César Lemus</div>
+    <div class="ms-auto d-flex nav-right">
+      <a class="nav-link" href="#inicio">Inicio</a>
+      <a class="nav-link" href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- HERO minimal -->
+  <main class="hero" id="inicio">
+    <div class="hero-left">
+      <h1 class="name">Hola, soy César</h1>
+      <p class="sub">Prueba jeje</p>
+
+      <div class="cards" aria-hidden="false">
+        <div class="mini-card">
+          <div style="font-weight:600">Guate502</div>
+          <div style="color:var(--muted);font-size:0.92rem">jejeje.</div>
+        </div>
+
+        <div class="mini-card">
+          <div style="font-weight:600">minicard</div>
+          <div style="color:var(--muted);font-size:0.92rem">jajsjkadsjadkljasdk.</div>
+        </div>
+
+        <div class="mini-card">
+          <div style="font-weight:600">no se que poner</div>
+          <div style="color:var(--muted);font-size:0.92rem">tabla <code>estudiantes</code>.</div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-end">
+      <a class="btn btn-outline-primary btn-sm" href="#proyectos">Ver proyectos</a>
+      <a class="btn btn-primary btn-sm" href="#contacto">Contactarme</a>
+    </div>
+  </main>
+
+  <section id="proyectos" class="container" style="padding:18px;">
+    
+    <ul style="list-style:none;padding:0;margin:0;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap">
+      <li style="background:white;padding:10px 12px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.03)">hola</li>
+      <li style="background:white;padding:10px 12px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.03)">como </li>
+      <li style="background:white;padding:10px 12px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.03)">estan</li>
+    </ul>
+  </section>
+
+  
+
+  <footer>
+    &copy; <span id="year"></span> César Lemus 
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
